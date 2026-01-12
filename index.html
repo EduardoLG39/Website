@@ -1,238 +1,357 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="es">  
-	<head>
-		<title>CV | Eduardo</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Eduardo</title>
+  <meta name="description" content="CV y presentación personal de Eduardo: educación, cursos, proyectos y contacto." />
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: #e8eefc;
+      --muted: rgba(232,238,252,.72);
+      --line: rgba(255,255,255,.12);
+      --accent: #38bdf8;
+      --accent2:#a78bfa;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<a href="#top" class="logo"><strong>CV</strong> <span>Presentación personal</span></a>
-				<nav>
-					<a href="#menu">Menú</a>
-				</nav>
-			</header>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 20% 0%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(900px 600px at 90% 10%, rgba(167,139,250,.18), transparent 55%),
+        radial-gradient(900px 700px at 40% 120%, rgba(34,197,94,.12), transparent 60%),
+        var(--bg);
+    }
 
-			<!-- Menu -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="#top">Inicio</a></li>
-					<li><a href="#educacion">Educación</a></li>
-					<li><a href="#habilidades">Habilidades</a></li>
-					<li><a href="#proyectos">Proyectos</a></li>
-					<li><a href="#contacto">Contacto</a></li>
-				</ul>
-				<ul class="actions stacked">
-					<li><a href="#contacto" class="button primary fit">Contáctame</a></li>
-				</ul>
-			</nav>
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 18px}
 
-			<!-- Banner -->
-			<section id="banner" class="major">
-				<div class="inner" id="top">
-					<header class="major">
-						<h1>Eduardo</h1>
-					</header>
-					<div class="content">
-						<p>
-							<strong>Presentación / Rol:</strong> (Ej: Estudiante / Analista Junior / Desarrollador)<br />
-							Aquí va un resumen corto (2–3 líneas) sobre ti: qué estudias, qué te interesa y qué tipo de oportunidades buscas.
-						</p>
-						<ul class="actions">
-							<li><a href="#proyectos" class="button next scrolly">Ver proyectos</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,18,32,.65);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0; gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 18px rgba(56,189,248,.55);
+    }
 
-			<!-- Main -->
-			<div id="main">
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      border-color: rgba(56,189,248,.35);
+      background: linear-gradient(180deg, rgba(56,189,248,.22), rgba(56,189,248,.10));
+    }
 
-				<!-- Educación -->
-				<section id="educacion">
-					<div class="inner">
-						<header class="major">
-							<h2>Educación</h2>
-						</header>
+    /* Hero */
+    .hero{
+      padding:28px 0 10px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{padding:18px}
+    .hero-side{padding:18px}
 
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h3>Universidad / Instituto</h3>
-								<p>
-									<strong>Carrera:</strong> (Ej: Economía / Ingeniería / etc.)<br />
-									<strong>Fechas:</strong> (Ej: 2022 – Actualidad)<br />
-									<strong>Enfoque:</strong> (Ej: Finanzas, Data, Negocios, etc.)
-								</p>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h3>Cursos / Certificaciones</h3>
-								<ul>
-									<li>Curso 1 — Plataforma/Institución (Año)</li>
-									<li>Curso 2 — Plataforma/Institución (Año)</li>
-									<li>Curso 3 — Plataforma/Institución (Año)</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:7px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(56,189,248,.25);
+      background: rgba(56,189,248,.10);
+      font-size: 13px;
+      color: var(--text);
+    }
+    h1{margin:12px 0 6px; font-size: 44px; line-height: 1.05}
+    .subtitle{margin:0; color: var(--muted); font-weight:700}
+    .lead{margin:12px 0 0; color: var(--text); opacity:.92; line-height:1.6}
 
-				<!-- Habilidades -->
-				<section id="habilidades" class="spotlights">
-					<section>
-						<div class="content">
-							<div class="inner">
-								<header class="major">
-									<h3>Habilidades Técnicas</h3>
-								</header>
-								<ul>
-									<li>Habilidad 1 (Ej: Excel / SQL / Python / Power BI)</li>
-									<li>Habilidad 2</li>
-									<li>Habilidad 3</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 0}
+    .mini{
+      margin:14px 0 0;
+      display:grid; gap:8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .mini strong{color: var(--text)}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      font-size: 13px;
+      color: var(--text);
+    }
 
-					<section>
-						<div class="content">
-							<div class="inner">
-								<header class="major">
-									<h3>Herramientas</h3>
-								</header>
-								<ul>
-									<li>Git / GitHub</li>
-									<li>Google Sheets / Excel</li>
-									<li>Herramienta extra (opcional)</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+    /* Sections */
+    section{scroll-margin-top: 90px;}
+    .section{
+      padding:18px 0;
+    }
+    .section-header{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:12px; margin: 12px 0;
+    }
+    .section-header h2{margin:0; font-size:22px}
+    .section-header p{margin:0; color: var(--muted); font-size:14px}
 
-					<section>
-						<div class="content">
-							<div class="inner">
-								<header class="major">
-									<h3>Habilidades Blandas</h3>
-								</header>
-								<ul>
-									<li>Comunicación</li>
-									<li>Trabajo en equipo</li>
-									<li>Organización</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-				</section>
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:12px;
+    }
+    .block{padding:16px; background: var(--card2); border-radius: var(--radius); border:1px solid var(--line)}
+    .block h3{margin:0 0 8px; font-size:16px}
+    ul{margin:0; padding-left:18px; color: var(--text); opacity:.92}
+    li{margin:6px 0; line-height:1.45}
+    .muted{color:var(--muted)}
+    .link{
+      display:inline-flex; gap:8px; align-items:center;
+      color: var(--accent);
+      font-weight:800;
+      margin-top:10px;
+    }
+    .link:hover{text-decoration: underline}
 
-				<!-- Proyectos -->
-				<section id="proyectos">
-					<div class="inner">
-						<header class="major">
-							<h2>Proyectos</h2>
-						</header>
-						<p>Incluye 2–6 proyectos. Ideal: qué hiciste + herramienta usada + resultado (si aplica).</p>
+    /* Footer */
+    .footer{
+      padding:22px 0 30px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top:1px solid var(--line);
+      margin-top: 14px;
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
 
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h3>Proyecto 1</h3>
-								<p>
-									Descripción corta del proyecto (qué problema resuelve).<br />
-									<strong>Tecnologías:</strong> (Ej: Excel, Python, SQL)<br />
-									<strong>Link:</strong> <a href="https://github.com/tuusuario" target="_blank" rel="noreferrer">Repositorio / Demo</a>
-								</p>
-							</div>
+    /* Mobile */
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      h1{font-size:36px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
 
-							<div class="col-6 col-12-medium">
-								<h3>Proyecto 2</h3>
-								<p>
-									Descripción corta del proyecto.<br />
-									<strong>Tecnologías:</strong> (Ej: Power BI, SQL)<br />
-									<strong>Link:</strong> <a href="#" target="_blank" rel="noreferrer">Repositorio / Demo</a>
-								</p>
-							</div>
-						</div>
+<body>
+  <!-- NAV / BOTONES -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>CV · Eduardo</span>
+      </div>
 
-						<ul class="actions">
-							<li><a href="#contacto" class="button next scrolly">Contacto</a></li>
-						</ul>
-					</div>
-				</section>
+      <nav class="nav">
+        <a class="btn" href="#personal">Información personal</a>
+        <a class="btn" href="#proyectos">Proyectos</a>
+        <a class="btn primary" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-			</div>
+  <main class="container">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card hero-main">
+        <span class="pill">Disponible para oportunidades</span>
+        <h1>Eduardo</h1>
+        <p class="subtitle">Tu rol aquí (ej. Estudiante de Economía · Analista Junior)</p>
+        <p class="lead">
+          Escribe aquí tu presentación breve (3–5 líneas). Qué estudias/haces, qué te interesa y qué tipo de
+          proyectos u oportunidades buscas.
+        </p>
 
-			<!-- Contact -->
-			<section id="contacto">
-				<div class="inner">
-					<section>
-						<header class="major">
-							<h2>Contacto</h2>
-						</header>
+        <div class="actions">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#contacto">Contactarme</a>
+        </div>
 
-						<p>Si quieres, aquí puedes poner un mensaje corto para reclutadores (disponibilidad, tipo de rol, etc.).</p>
+        <div class="mini">
+          <div><strong>📍 Ciudad:</strong> Lima, Perú</div>
+          <div><strong>✉️ Email:</strong> tuemail@correo.com</div>
+          <div><strong>🔗 LinkedIn:</strong> linkedin.com/in/tuusuario</div>
+          <div><strong>💻 GitHub:</strong> github.com/tuusuario</div>
+        </div>
+      </div>
 
-						<ul class="actions">
-							<li><a href="mailto:tuemail@correo.com" class="button primary">Enviar email</a></li>
-						</ul>
-					</section>
+      <aside class="card hero-side">
+        <h3 style="margin:0 0 6px;">En resumen</h3>
+        <p class="muted" style="margin:0 0 10px;">
+          3 bullets rápidos con tu perfil (impacto, intereses, fortalezas).
+        </p>
+        <ul>
+          <li>Interés principal: finanzas / data / emprendimiento</li>
+          <li>Fortaleza: análisis, organización, comunicación</li>
+          <li>Herramientas: Excel, Power BI, SQL, etc.</li>
+        </ul>
 
-					<section class="split">
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-envelope"></span>
-								<h3>Email</h3>
-								<a href="mailto:tuemail@correo.com">tuemail@correo.com</a>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon brands alt fa-linkedin-in"></span>
-								<h3>LinkedIn</h3>
-								<a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">linkedin.com/in/tuusuario</a>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon brands alt fa-github"></span>
-								<h3>GitHub</h3>
-								<a href="https://github.com/tuusuario" target="_blank" rel="noreferrer">github.com/tuusuario</a>
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
+        <div class="tags" aria-label="Tecnologías">
+          <span class="tag">Excel</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+        </div>
+      </aside>
+    </div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="copyright">
-						<li>&copy; Eduardo</li>
-						<li>Diseño base: HTML5 UP (Forty)</li>
-					</ul>
-				</div>
-			</footer>
+    <!-- 1) INFORMACIÓN PERSONAL -->
+    <section class="section" id="personal">
+      <div class="section-header">
+        <h2>Información personal</h2>
+        <p>Educación, cursos y habilidades.</p>
+      </div>
 
-		</div>
+      <div class="grid">
+        <div class="block">
+          <h3>Educación</h3>
+          <ul>
+            <li><strong>Universidad / Instituto</strong> — Carrera (Año inicio – Actualidad)</li>
+            <li>Enfoque / mención (opcional)</li>
+          </ul>
+        </div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+        <div class="block">
+          <h3>Cursos / Certificaciones</h3>
+          <ul>
+            <li>Curso 1 — Institución (Año)</li>
+            <li>Curso 2 — Institución (Año)</li>
+            <li>Curso 3 — Institución (Año)</li>
+          </ul>
+        </div>
 
-	</body>
+        <div class="block">
+          <h3>Habilidades técnicas</h3>
+          <div class="tags">
+            <span class="tag">Excel avanzado</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python (opcional)</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>Habilidades blandas</h3>
+          <div class="tags">
+            <span class="tag">Comunicación</span>
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Pensamiento analítico</span>
+            <span class="tag">Organización</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="section-header">
+        <h2>Proyectos</h2>
+        <p>Emprendimiento y trabajos destacados.</p>
+      </div>
+
+      <div class="grid">
+        <div class="block">
+          <h3>Emprendimiento / Proyecto 1</h3>
+          <p class="muted" style="margin:0 0 10px;">
+            Descripción corta (qué hiciste, qué problema resuelve, para quién).
+          </p>
+          <ul>
+            <li><strong>Rol:</strong> fundador / analista / líder</li>
+            <li><strong>Herramientas:</strong> Excel, redes, ventas, etc.</li>
+            <li><strong>Resultado:</strong> métrica (si tienes: ventas, usuarios, ahorro)</li>
+          </ul>
+          <a class="link" href="#" target="_blank" rel="noreferrer">Ver link / evidencia →</a>
+        </div>
+
+        <div class="block">
+          <h3>Proyecto 2</h3>
+          <p class="muted" style="margin:0 0 10px;">
+            Ej: dashboard en Power BI, análisis en Excel, investigación, etc.
+          </p>
+          <ul>
+            <li><strong>Herramientas:</strong> Power BI, SQL</li>
+            <li><strong>Qué aprendiste / impacto:</strong> 1 línea</li>
+          </ul>
+          <a class="link" href="#" target="_blank" rel="noreferrer">Ver repositorio / demo →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="section-header">
+        <h2>Contacto</h2>
+        <p>Links directos para encontrarte rápido.</p>
+      </div>
+
+      <div class="grid">
+        <div class="block">
+          <h3>Escríbeme</h3>
+          <p class="muted" style="margin:0 0 12px;">
+            Puedes cambiar este texto por tu disponibilidad (prácticas, full-time, freelance).
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:tuemail@correo.com">Enviar email</a>
+            <a class="btn" href="#top">Volver arriba</a>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>Mis enlaces</h3>
+          <ul>
+            <li><strong>Email:</strong> <a class="link" href="mailto:tuemail@correo.com">tuemail@correo.com →</a></li>
+            <li><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">linkedin.com/in/tuusuario →</a></li>
+            <li><strong>GitHub:</strong> <a class="link" href="https://github.com/tuusuario" target="_blank" rel="noreferrer">github.com/tuusuario →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>© <span id="year"></span> Eduardo</span>
+        <span>Hecho con GitHub Pages</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
