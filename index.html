@@ -3,167 +3,176 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV | Eduardo</title>
-  <meta name="description" content="CV y presentación personal de Eduardo: educación, cursos, proyectos y contacto." />
+  <title>Eduardo Luna Garrido | CV</title>
+  <meta name="description" content="CV de Eduardo Luna Garrido: educación, voluntariados, certificaciones, habilidades y emprendimiento." />
 
   <style>
     :root{
-      --bg: #0b1220;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --text: #e8eefc;
-      --muted: rgba(232,238,252,.72);
-      --line: rgba(255,255,255,.12);
-      --accent: #38bdf8;
+      --bg:#0b1220;
+      --card:rgba(255,255,255,.07);
+      --card2:rgba(255,255,255,.09);
+      --text:#e9eefc;
+      --muted:rgba(233,238,252,.72);
+      --line:rgba(255,255,255,.13);
+      --accent:#38bdf8;
       --accent2:#a78bfa;
-      --shadow: 0 14px 40px rgba(0,0,0,.35);
-      --radius: 18px;
+      --shadow:0 16px 44px rgba(0,0,0,.35);
+      --radius:18px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 600px at 20% 0%, rgba(56,189,248,.22), transparent 55%),
-        radial-gradient(900px 600px at 90% 10%, rgba(167,139,250,.18), transparent 55%),
-        radial-gradient(900px 700px at 40% 120%, rgba(34,197,94,.12), transparent 60%),
+        radial-gradient(900px 600px at 18% 0%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(900px 600px at 88% 8%, rgba(167,139,250,.18), transparent 55%),
+        radial-gradient(900px 700px at 40% 115%, rgba(34,197,94,.12), transparent 60%),
         var(--bg);
     }
-
     a{color:inherit; text-decoration:none}
     .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    section{scroll-margin-top:90px}
 
     /* Topbar */
     .topbar{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(11,18,32,.65);
-      border-bottom: 1px solid var(--line);
+      backdrop-filter:blur(14px);
+      background:rgba(11,18,32,.68);
+      border-bottom:1px solid var(--line);
     }
     .topbar-inner{
       display:flex; align-items:center; justify-content:space-between;
       padding:12px 0; gap:12px;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px}
     .dot{
       width:12px; height:12px; border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 18px rgba(56,189,248,.55);
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 0 18px rgba(56,189,248,.55);
     }
-
-    .nav{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 700;
-      font-size: 14px;
-      transition: transform .12s ease, background .12s ease;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      font-weight:800; font-size:14px;
+      transition:transform .12s ease, background .12s ease;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.10)}
     .btn.primary{
-      border-color: rgba(56,189,248,.35);
-      background: linear-gradient(180deg, rgba(56,189,248,.22), rgba(56,189,248,.10));
+      border-color:rgba(56,189,248,.35);
+      background:linear-gradient(180deg, rgba(56,189,248,.24), rgba(56,189,248,.10));
     }
 
     /* Hero */
-    .hero{
-      padding:28px 0 10px;
+    .hero{padding:30px 0 18px}
+    .hero-grid{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1fr 360px;
       gap:14px;
     }
     .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
     }
     .hero-main{padding:18px}
     .hero-side{padding:18px}
-
     .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:7px 10px;
-      border-radius: 999px;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px; border-radius:999px;
       border:1px solid rgba(56,189,248,.25);
-      background: rgba(56,189,248,.10);
-      font-size: 13px;
-      color: var(--text);
+      background:rgba(56,189,248,.10);
+      font-size:13px;
     }
-    h1{margin:12px 0 6px; font-size: 44px; line-height: 1.05}
-    .subtitle{margin:0; color: var(--muted); font-weight:700}
-    .lead{margin:12px 0 0; color: var(--text); opacity:.92; line-height:1.6}
+    h1{margin:12px 0 6px; font-size:44px; line-height:1.05}
+    .subtitle{margin:0; color:var(--muted); font-weight:800}
+    .lead{margin:12px 0 0; line-height:1.65; color:var(--text); opacity:.93}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
 
-    .actions{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 0}
-    .mini{
-      margin:14px 0 0;
-      display:grid; gap:8px;
+    .avatar{
+      width:100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,.25);
+      background: rgba(255,255,255,.04);
+      display:flex; align-items:center; justify-content:center;
       color: var(--muted);
-      font-size: 14px;
+      text-align:center;
+      padding:14px;
     }
-    .mini strong{color: var(--text)}
-    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .tag{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      font-size: 13px;
-      color: var(--text);
+
+    .mini{
+      margin-top:14px;
+      display:grid; gap:10px;
+      color:var(--muted);
+      font-size:14px;
     }
+    .mini strong{color:var(--text)}
 
     /* Sections */
-    section{scroll-margin-top: 90px;}
-    .section{
-      padding:18px 0;
-    }
+    .section{padding:22px 0}
     .section-header{
       display:flex; align-items:baseline; justify-content:space-between;
       gap:12px; margin: 12px 0;
     }
     .section-header h2{margin:0; font-size:22px}
-    .section-header p{margin:0; color: var(--muted); font-size:14px}
+    .section-header p{margin:0; color:var(--muted); font-size:14px}
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:12px;
+    .grid{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px}
+    .block{
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:var(--card2);
     }
-    .block{padding:16px; background: var(--card2); border-radius: var(--radius); border:1px solid var(--line)}
     .block h3{margin:0 0 8px; font-size:16px}
-    ul{margin:0; padding-left:18px; color: var(--text); opacity:.92}
-    li{margin:6px 0; line-height:1.45}
     .muted{color:var(--muted)}
-    .link{
-      display:inline-flex; gap:8px; align-items:center;
-      color: var(--accent);
-      font-weight:800;
-      margin-top:10px;
+    ul{margin:0; padding-left:18px; color:var(--text); opacity:.92}
+    li{margin:7px 0; line-height:1.5}
+
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      font-size:13px;
     }
-    .link:hover{text-decoration: underline}
+    .kpi{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
+    }
+    .chip{
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid rgba(56,189,248,.25);
+      background:rgba(56,189,248,.10);
+      font-weight:800;
+      font-size:13px;
+    }
+    .link{
+      display:inline-flex; align-items:center; gap:8px;
+      margin-top:10px;
+      color:var(--accent);
+      font-weight:900;
+    }
+    .link:hover{text-decoration:underline}
 
     /* Footer */
     .footer{
       padding:22px 0 30px;
-      color: var(--muted);
-      font-size: 13px;
+      color:var(--muted);
+      font-size:13px;
       border-top:1px solid var(--line);
-      margin-top: 14px;
+      margin-top: 16px;
       display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
 
-    /* Mobile */
-    @media (max-width: 900px){
-      .hero{grid-template-columns: 1fr}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
       h1{font-size:36px}
       .grid{grid-template-columns:1fr}
     }
@@ -171,16 +180,13 @@
 </head>
 
 <body>
-  <!-- NAV / BOTONES -->
+  <!-- Botones para ir a cada sección -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>CV · Eduardo</span>
-      </div>
-
+      <div class="brand"><span class="dot"></span><span>CV · Eduardo Luna</span></div>
       <nav class="nav">
-        <a class="btn" href="#personal">Información personal</a>
+        <a class="btn" href="#perfil">Perfil</a>
+        <a class="btn" href="#formacion">Formación</a>
         <a class="btn" href="#proyectos">Proyectos</a>
         <a class="btn primary" href="#contacto">Contacto</a>
       </nav>
@@ -188,163 +194,233 @@
   </header>
 
   <main class="container">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="card hero-main">
-        <span class="pill">Disponible para oportunidades</span>
-        <h1>Eduardo</h1>
-        <p class="subtitle">Tu rol aquí (ej. Estudiante de Economía · Analista Junior)</p>
-        <p class="lead">
-          Escribe aquí tu presentación breve (3–5 líneas). Qué estudias/haces, qué te interesa y qué tipo de
-          proyectos u oportunidades buscas.
-        </p>
 
-        <div class="actions">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn" href="#contacto">Contactarme</a>
+    <!-- HERO (más “vertical”, con espacio para foto) -->
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <span class="pill">Finanzas · Inversiones · Riesgo</span>
+          <h1>Eduardo Luna Garrido</h1>
+          <p class="subtitle">Estudiante de Finanzas (PUCP) · 10mo ciclo · Quinto Superior</p>
+
+          <p class="lead">
+            Estudiante de 10mo ciclo de Finanzas en la PUCP, perteneciente al Quinto Superior.
+            He orientado mi formación hacia las Finanzas Corporativas y la Gestión de Inversiones,
+            con experiencia en análisis y estructuración de estados financieros y valorización de empresas
+            (DCF, múltiplos, entre otros). :contentReference[oaicite:4]{index=4}
+          </p>
+
+          <p class="lead">
+            Cuento con conocimientos en Asset Management (gestión de portafolios y evaluación de instrumentos)
+            y en Gestión de Riesgos Financieros, aplicando técnicas de identificación y mitigación de riesgos
+            de mercado, crédito y liquidez. :contentReference[oaicite:5]{index=5}
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#formacion">Ver formación</a>
+            <a class="btn" href="#proyectos">Ver emprendimiento</a>
+          </div>
         </div>
 
-        <div class="mini">
-          <div><strong>📍 Ciudad:</strong> Lima, Perú</div>
-          <div><strong>✉️ Email:</strong> tuemail@correo.com</div>
-          <div><strong>🔗 LinkedIn:</strong> linkedin.com/in/tuusuario</div>
-          <div><strong>💻 GitHub:</strong> github.com/tuusuario</div>
-        </div>
+        <aside class="card hero-side">
+          <div class="avatar">
+            <div>
+              <strong>Espacio para tu foto</strong><br/>
+              (reemplazaremos esto cuando la subas)
+            </div>
+          </div>
+
+          <div class="mini">
+            <div><strong>📍 Universidad:</strong> Pontificia Universidad Católica del Perú (PUCP)</div>
+            <div><strong>🎯 Enfoque:</strong> Finanzas Corporativas & Gestión de Inversiones</div>
+            <div><strong>🧠 Perfil:</strong> analítico, comprometido, adaptable</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PERFIL (sección extra para hacerlo más vertical y “largo”) -->
+    <section class="section" id="perfil">
+      <div class="section-header">
+        <h2>Perfil</h2>
+        <p>Qué hago y en qué me especializo.</p>
       </div>
 
-      <aside class="card hero-side">
-        <h3 style="margin:0 0 6px;">En resumen</h3>
-        <p class="muted" style="margin:0 0 10px;">
-          3 bullets rápidos con tu perfil (impacto, intereses, fortalezas).
-        </p>
-        <ul>
-          <li>Interés principal: finanzas / data / emprendimiento</li>
-          <li>Fortaleza: análisis, organización, comunicación</li>
-          <li>Herramientas: Excel, Power BI, SQL, etc.</li>
-        </ul>
-
-        <div class="tags" aria-label="Tecnologías">
-          <span class="tag">Excel</span>
-          <span class="tag">Power BI</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Git</span>
+      <div class="grid">
+        <div class="block">
+          <h3>Especialización</h3>
+          <ul>
+            <li>Finanzas Corporativas: análisis y estructuración de estados financieros.</li>
+            <li>Valorización de empresas: DCF, múltiplos, entre otros. :contentReference[oaicite:6]{index=6}</li>
+            <li>Inversiones y Asset Management: evaluación de instrumentos y portafolios. :contentReference[oaicite:7]{index=7}</li>
+          </ul>
         </div>
-      </aside>
-    </div>
 
-    <!-- 1) INFORMACIÓN PERSONAL -->
-    <section class="section" id="personal">
+        <div class="block">
+          <h3>Gestión de riesgos</h3>
+          <ul>
+            <li>Identificación y mitigación de riesgos: mercado, crédito y liquidez. :contentReference[oaicite:8]{index=8}</li>
+            <li>Enfoque en toma de decisiones con métricas de rendimiento y riesgo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section class="section" id="formacion">
       <div class="section-header">
-        <h2>Información personal</h2>
-        <p>Educación, cursos y habilidades.</p>
+        <h2>Formación</h2>
+        <p>Educación, voluntariados, certificaciones y habilidades.</p>
       </div>
 
       <div class="grid">
         <div class="block">
           <h3>Educación</h3>
           <ul>
-            <li><strong>Universidad / Instituto</strong> — Carrera (Año inicio – Actualidad)</li>
-            <li>Enfoque / mención (opcional)</li>
+            <li><strong>PUCP</strong> — Finanzas (10mo ciclo) · Quinto Superior. :contentReference[oaicite:9]{index=9}</li>
+            <li>Orientación: Finanzas Corporativas y Gestión de Inversiones. :contentReference[oaicite:10]{index=10}</li>
           </ul>
         </div>
 
         <div class="block">
-          <h3>Cursos / Certificaciones</h3>
+          <h3>Voluntariados</h3>
           <ul>
-            <li>Curso 1 — Institución (Año)</li>
-            <li>Curso 2 — Institución (Año)</li>
-            <li>Curso 3 — Institución (Año)</li>
+            <li><strong>Finance and Investment Club (FICPUCP)</strong> — Asset Management (2025-2 · Actualidad). :contentReference[oaicite:11]{index=11}</li>
+            <li><strong>Small Area Estimation Conference (PUCP-QLAB)</strong> — logística y soporte académico (2024-1). :contentReference[oaicite:12]{index=12}</li>
+            <li><strong>Asamblea de Estudiantes de Finanzas</strong> — presupuestos y gestión financiera (2024-1). :contentReference[oaicite:13]{index=13}</li>
           </ul>
         </div>
 
         <div class="block">
-          <h3>Habilidades técnicas</h3>
-          <div class="tags">
-            <span class="tag">Excel avanzado</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Python (opcional)</span>
-          </div>
+          <h3>Certificaciones / Reconocimientos</h3>
+          <ul>
+            <li>Evaluación de Proyectos de Inversión (INFOPUC). :contentReference[oaicite:14]{index=14}</li>
+            <li>Power Business Intelligence (INFOPUC). :contentReference[oaicite:15]{index=15}</li>
+            <li>Machine Learning and Causal Inference for Social Science (PUCP). :contentReference[oaicite:16]{index=16}</li>
+            <li>Applied Data Science in Political Analysis (PUCP). :contentReference[oaicite:17]{index=17}</li>
+            <li>1er puesto en cursos de Finanzas Corporativas y Análisis Financiero. :contentReference[oaicite:18]{index=18}</li>
+          </ul>
         </div>
 
         <div class="block">
-          <h3>Habilidades blandas</h3>
-          <div class="tags">
-            <span class="tag">Comunicación</span>
-            <span class="tag">Trabajo en equipo</span>
-            <span class="tag">Pensamiento analítico</span>
-            <span class="tag">Organización</span>
+          <h3>Habilidades</h3>
+          <div class="tags" aria-label="Hard skills">
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Bloomberg</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
           </div>
+          <p class="muted" style="margin:10px 0 0;">
+            Hard skills listados en el CV. :contentReference[oaicite:19]{index=19}
+          </p>
+
+          <div class="tags" style="margin-top:10px" aria-label="Soft skills">
+            <span class="tag">Liderazgo</span>
+            <span class="tag">Análisis</span>
+            <span class="tag">Resolutivo</span>
+            <span class="tag">Comunicación efectiva</span>
+            <span class="tag">Adaptabilidad</span>
+            <span class="tag">Sentido crítico</span>
+          </div>
+          <p class="muted" style="margin:10px 0 0;">
+            Soft skills listados en el CV. :contentReference[oaicite:20]{index=20}
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- 2) PROYECTOS -->
+    <!-- PROYECTOS -->
     <section class="section" id="proyectos">
       <div class="section-header">
         <h2>Proyectos</h2>
-        <p>Emprendimiento y trabajos destacados.</p>
+        <p>Emprendimiento y experiencia destacada.</p>
       </div>
 
       <div class="grid">
         <div class="block">
-          <h3>Emprendimiento / Proyecto 1</h3>
+          <h3>RedSegura — Arbitraje P2P (Binance & Bybit)</h3>
           <p class="muted" style="margin:0 0 10px;">
-            Descripción corta (qué hiciste, qué problema resuelve, para quién).
+            Emprendimiento propio de arbitraje Peer-to-Peer (P2P) usando USDT (stablecoin),
+            con gestión de liquidez y análisis de mercado/competencia. :contentReference[oaicite:21]{index=21}
           </p>
-          <ul>
-            <li><strong>Rol:</strong> fundador / analista / líder</li>
-            <li><strong>Herramientas:</strong> Excel, redes, ventas, etc.</li>
-            <li><strong>Resultado:</strong> métrica (si tienes: ventas, usuarios, ahorro)</li>
+
+          <div class="kpi" aria-label="Métricas clave">
+            <span class="chip">Bybit (PEN/USDT): +1.85M USDT</span>
+            <span class="chip">Binance: +900K USDT</span>
+          </div>
+          <p class="muted" style="margin:10px 0 0;">
+            Métricas y descripción tomadas de tu CV. :contentReference[oaicite:22]{index=22}
+          </p>
+
+          <ul style="margin-top:12px">
+            <li>Estrategias en gestión de liquidez.</li>
+            <li>Análisis de mercado y competencia.</li>
+            <li>Administración responsable de recursos propios. :contentReference[oaicite:23]{index=23}</li>
           </ul>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Ver link / evidencia →</a>
         </div>
 
         <div class="block">
-          <h3>Proyecto 2</h3>
+          <h3>Work and Travel — EE.UU.</h3>
           <p class="muted" style="margin:0 0 10px;">
-            Ej: dashboard en Power BI, análisis en Excel, investigación, etc.
+            Mesquite (Nevada) & Red River (New Mexico). Roles: Server Assistant y Ski Technician.
           </p>
           <ul>
-            <li><strong>Herramientas:</strong> Power BI, SQL</li>
-            <li><strong>Qué aprendiste / impacto:</strong> 1 línea</li>
+            <li>Atención al cliente, comunicación en inglés y trabajo en equipo.</li>
+            <li>Adaptación en entorno multicultural. :contentReference[oaicite:24]{index=24}</li>
           </ul>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Ver repositorio / demo →</a>
         </div>
+      </div>
+
+      <div class="actions" style="margin-top:14px">
+        <a class="btn" href="#formacion">Volver a formación</a>
+        <a class="btn primary" href="#contacto">Ir a contacto</a>
       </div>
     </section>
 
-    <!-- 3) CONTACTO -->
+    <!-- CONTACTO -->
     <section class="section" id="contacto">
       <div class="section-header">
         <h2>Contacto</h2>
-        <p>Links directos para encontrarte rápido.</p>
+        <p>Links directos para hablar contigo.</p>
       </div>
 
       <div class="grid">
         <div class="block">
           <h3>Escríbeme</h3>
           <p class="muted" style="margin:0 0 12px;">
-            Puedes cambiar este texto por tu disponibilidad (prácticas, full-time, freelance).
+            Aquí pondremos tu información final de contacto (email, teléfono, LinkedIn, etc.).
           </p>
+
+          <!-- Reemplazar cuando me confirmes los links finales -->
           <div class="actions">
-            <a class="btn primary" href="mailto:tuemail@correo.com">Enviar email</a>
+            <a class="btn primary" href="mailto:eduardo.luna@pucp.edu.pe">Enviar email</a>
             <a class="btn" href="#top">Volver arriba</a>
           </div>
+
+          <p class="muted" style="margin-top:10px;">
+            Email tomado del CV. :contentReference[oaicite:25]{index=25}
+          </p>
         </div>
 
         <div class="block">
           <h3>Mis enlaces</h3>
           <ul>
-            <li><strong>Email:</strong> <a class="link" href="mailto:tuemail@correo.com">tuemail@correo.com →</a></li>
-            <li><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">linkedin.com/in/tuusuario →</a></li>
-            <li><strong>GitHub:</strong> <a class="link" href="https://github.com/tuusuario" target="_blank" rel="noreferrer">github.com/tuusuario →</a></li>
+            <li><strong>Email:</strong> <a class="link" href="mailto:eduardo.luna@pucp.edu.pe">eduardo.luna@pucp.edu.pe →</a></li>
+            <li><strong>Teléfono:</strong> <span class="muted">(+51) 934 152 418</span></li>
+            <li><strong>LinkedIn:</strong> <span class="muted">(pásame el link exacto y lo coloco)</span></li>
+            <li><strong>GitHub:</strong> <span class="muted">(opcional: pásame tu usuario)</span></li>
           </ul>
+
+          <p class="muted" style="margin-top:10px;">
+            Teléfono y email tomados del CV. :contentReference[oaicite:26]{index=26}
+          </p>
         </div>
       </div>
 
       <div class="footer">
-        <span>© <span id="year"></span> Eduardo</span>
+        <span>© <span id="year"></span> Eduardo Luna Garrido</span>
         <span>Hecho con GitHub Pages</span>
       </div>
     </section>
